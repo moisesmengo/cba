@@ -1,0 +1,44 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <meta name="description" content="Descrição da página" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>CBA</title>
+  </head>
+  <body class="index">
+    <header>
+      <div class="container">
+        <a href="" class="logo">
+          <img src="assets/img/logo.webp" alt="CBA" />
+        </a>
+
+        <a href="login.html" class="btn">login</a>
+      </div>
+    </header>
+
+    <main class="content">
+      <div id="loader" class="loader"></div>
+
+      <iframe
+        src="https://cba.org.br/"
+        frameborder="0"
+        onload="hideLoader()"
+      ></iframe>
+    </main>
+
+    <script>
+      function hideLoader() {
+        document.getElementById("loader").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

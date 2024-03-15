@@ -1,0 +1,77 @@
+header {
+  background: $ligth--3;
+  box-shadow: 0 4px 4px #00000025;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  .container {
+    height: 83px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 0;
+
+    .logo {
+      width: 85px;
+    }
+
+    .btn {
+      background: $primary;
+      max-width: 95px;
+      color: $ligth--1;
+
+      &:hover {
+        background: $ligth--1;
+        color: $primary;
+      }
+    }
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 8px 28px;
+  font-weight: bold;
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid $primary;
+  transition: all 0.7s;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(60%);
+  }
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Cor de fundo */
+  border-top: 16px solid #154a94; /* Cor do spinner */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

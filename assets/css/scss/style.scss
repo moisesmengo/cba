@@ -1,0 +1,47 @@
+$dark: #000;
+$ligth--2: #fdfbfb;
+$ligth--3: #eeeeee;
+$ligth--1: #fff;
+
+$primary: #154a94;
+$secundary: #d2ac67;
+
+@import "components";
+@import "pages/index";
+
+body {
+  background: url(/assets/img/bg-desk.webp) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin container {
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 96%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: $dark;
+  font-family: "Inter", sans-serif;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+.container {
+  @include container;
+}
