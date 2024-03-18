@@ -18,6 +18,70 @@ header {
     .logo {
       width: 85px;
     }
+    .area-menu,
+    .notificacoes {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .notificacoes {
+      gap: 5px;
+      .areta-total {
+        position: relative;
+        border: none;
+        transition: all 0.4s;
+        cursor: pointer;
+        &:hover {
+          .total {
+            filter: brightness(80%);
+          }
+        }
+        .total {
+          position: absolute;
+          color: $ligth--1;
+          background: $secundary;
+          font-size: 12px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 17px;
+          height: 17px;
+          border-radius: 50%;
+          top: -6px;
+          right: -6px;
+        }
+      }
+      .nome {
+        color: $primary;
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+
+    .menu-mobile {
+      background: none;
+      cursor: pointer;
+      border: none;
+      width: 25px;
+      height: 25px;
+
+      .hamburgger {
+        display: block;
+        border-top: 2px solid $primary;
+
+        &::after,
+        &::before {
+          content: "";
+          display: block;
+          width: 25px;
+          height: 2px;
+          background: $primary;
+          margin-top: 7px;
+        }
+      }
+    }
 
     .btn {
       background: $primary;
@@ -30,6 +94,83 @@ header {
       }
     }
   }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: $ligth--3;
+    overflow: hidden;
+    transform: scale(0);
+    transition: all 0.5s;
+    transform-origin: top left;
+
+    &.ativo {
+      transform: scale(1);
+      overflow: auto;
+    }
+
+    .container {
+      flex-direction: column;
+
+      .header-menu {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px 0;
+
+        .close {
+          background: red;
+          color: $ligth--1;
+          font-size: 16px;
+          font-family: Arial, Helvetica, sans-serif;
+          cursor: pointer;
+          line-height: 1.7;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          border: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+
+          transition: all 0.4s;
+          &:hover {
+            filter: brightness(80%);
+          }
+        }
+      }
+
+      ul {
+        display: grid;
+        gap: 10px;
+        width: 100%;
+        li {
+          background: $primary;
+          border-radius: 8px;
+          transition: all 0.7s;
+          a {
+            color: $ligth--1;
+            display: block;
+            text-align: center;
+            padding: 12px;
+          }
+          &:hover {
+            filter: brightness(90%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.sub {
+  font-size: 20px;
+  font-weight: normal;
+  text-transform: uppercase;
 }
 
 .btn {
