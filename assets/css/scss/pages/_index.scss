@@ -6,6 +6,7 @@
 }
 .login {
   main {
+    animation: show 1s forwards;
     padding: 120px 0;
     display: flex;
     flex-direction: column;
@@ -66,8 +67,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 63px 0;
-    margin-top: 83px;
+
     ul {
       display: grid;
       gap: 47px 60px;
@@ -76,31 +76,22 @@
       @media (max-width: 340px) {
         gap: 20px;
       }
-      li {
-        border-radius: 8px;
-        background: $primary;
-        text-align: center;
-        border: 3px solid $secundary;
-        padding: 18px;
-        box-shadow: 0 4px 4px #00000025;
-        transition: all 0.5s;
+    }
+  }
+}
+.home-logado {
+  main {
+    ul {
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 7px !important;
 
-        &:hover {
-          filter: brightness(90%);
+      li {
+        padding: 12px;
+        img {
+          width: 60px;
         }
         span {
-          font-weight: bold;
-          display: block;
-          max-width: 10ch;
-          margin: 0 auto;
-          color: $ligth--1;
-        }
-        img {
-          margin: 0 auto 12px;
-          height: 60px;
-          @media (max-width: 340px) {
-            max-width: 50px;
-          }
+          font-size: 15px;
         }
       }
     }
