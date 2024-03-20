@@ -3,3 +3,33 @@
     margin-top: 62px;
   }
 }
+
+.noti {
+  main {
+    padding-bottom: 0;
+  }
+  .content_not {
+    background: #fff;
+    padding: 8px;
+    animation: show 1s forwards;
+    .container {
+      p {
+        font-size: 15px;
+        text-transform: uppercase;
+      }
+
+      .btn {
+        margin: 46px auto;
+        color: #005ca9;
+        border-color: #005ca9;
+        max-width: 248px;
+        box-shadow: 2px 4px 2px rgba($color: #000000, $alpha: 0.2);
+
+        &:hover {
+          color: $ligth--1;
+          background: $primary;
+        }
+      }
+    }
+  }
+}

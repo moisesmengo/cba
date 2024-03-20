@@ -10,6 +10,7 @@ $secundary: #d2ac67;
 @import "components";
 @import "pages/index";
 @import "pages/notificacoes";
+@import "pages/paginas";
 
 @keyframes show {
   from {
@@ -35,7 +36,7 @@ iframe {
 }
 
 @mixin container {
-  max-width: 1600px;
+  max-width: 900px;
   margin: 0 auto;
   width: 96%;
 }
