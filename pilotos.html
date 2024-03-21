@@ -100,9 +100,20 @@
       <h2 class="title">pilotos</h2>
     </main>
     <div class="dashboard">
-      <img src="assets/img/pilotos.webp" alt="" />
+      <div id="loader" class="loader"></div>
+      <iframe
+        src="https://pilotos.cba.org.br/"
+        frameborder="0"
+        onload="hideLoader()"
+      ></iframe>
     </div>
 
     <script src="assets/js/geral.js"></script>
+
+    <script>
+      function hideLoader() {
+        document.getElementById("loader").style.display = "none";
+      }
+    </script>
   </body>
 </html>
